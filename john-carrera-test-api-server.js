@@ -6,6 +6,8 @@ const server = http.createServer(async (req, res) => {
 
   const loader = [];
 
+  console.log("incoming request from: ", req.socket.remoteAddress);
+
 
   for await (const chunk of req) {
     loader.push(chunk);
